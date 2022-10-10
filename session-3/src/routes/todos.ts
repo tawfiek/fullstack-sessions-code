@@ -1,11 +1,19 @@
-import { Router } from 'express';
+import { Router } from "express";
+import {
+  addTodo,
+  getTodos,
+  getTodoById,
+  editTodo,
+  deleteTodo,
+} from "../controllers/todos";
+import logger from "../middlewares/logger";
 
 const router = Router();
-
-router.get('/');
-router.get('/:id');
-router.put('/:id');
-router.post('/');
-router.delete('/:id');
+router.use(logger);
+router.get("/", getTodos);
+router.get("/:id", getTodoById);
+router.put("/:id", editTodo);
+router.post("/", addTodo);
+router.delete("/:id", deleteTodo);
 
 export default router;
