@@ -1,0 +1,20 @@
+{
+  "name": "linting",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint",
+    "prettier": "prettier --write"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.13.0",
+    "prettier": "^2.6.2"
+  },
+  "dependencies": {
+
+  },
+  "description": ""
+}
